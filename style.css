@@ -1,0 +1,414 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+   
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(img/everlast.jpg);
+    background-position: center;
+    background-size: cover;
+}
+a{
+text-decoration:none;
+color:#fff;
+cursor:pointer;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+
+}
+nav h2{
+    padding: 15px;
+    cursor: pointer;
+}
+.submenu-wrap{
+    width: 320px;
+    top: 10%;
+    right: 10%;
+    max-height: 0px;
+   position: absolute;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    cursor: pointer;
+}
+.submenu-wrap.open-menu{
+    max-height: 400px;
+}
+.submenu{
+    background: #Fff;
+    padding: 20px;
+    margin: 10px;
+
+}
+.user-info{
+    display: flex;
+    text-align: center;
+}
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.user{
+    width: 60px;
+    border-radius: 50%;
+
+}
+.submenu hr{
+    width: 100%;
+    height: 2px;
+    border: 0;
+    background: #525252;
+    margin: 15px 0 5px;
+}
+.submenu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #777;
+    padding: 12px;
+}
+.submenu-link span{
+    font-size: 22px;
+    font-weight: 400;
+}
+.submenu-link p{
+    width: 100%;
+}
+.submenu-link:hover span{
+    transform: translateX(5px);
+}
+.submenu-link:hover p{
+    font-weight: 600;
+}
+.submenu-link img{
+    width: 40px;
+    background:#777;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.content{
+    width: 100%;
+    text-align: left;
+    color: white;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.content h1{
+    color: blue;
+    font-size: 60px;
+    font-weight: 600;
+
+}
+.content p{
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 300;
+}
+/*-------services------*/
+.services{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+    margin-bottom: 40px;
+   
+   
+}
+.services h2{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.services p{
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.service-col-1{
+    flex-basis: 35%;
+   
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url(img/nutrition.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 15px;
+    border-radius: 12px;
+    padding: 100px 20px;
+    position: relative;
+}
+.service-col-1 h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.service-col-2{
+    flex-basis: 35%;
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url(img/5.willie\ pep.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 15px;
+    border-radius: 12px;
+    padding: 100px 20px;
+    position: relative;
+}
+.service-col-2 h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+.service-col-3{
+    flex-basis: 35%;
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url(img/gloves.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 15px;
+    border-radius: 12px;
+    padding: 100px 20px;
+    position: relative;
+}
+.service-col-3 h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    top: 0%;
+    left:0%;
+    position: absolute;
+    border-radius: 12px;
+    transition: 1s;
+   
+}
+.layer:hover{
+    background:rgb(226,0,0,0.4);
+}
+.layer p{
+    width: 100%;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 1s;
+
+}
+.layer:hover p{
+    opacity: 1;
+    top: 30%;
+}
+
+
+.btn{
+display:inline-block;
+background:#ff523b;
+color:#fff;
+margin:30px 0;
+border-radius:30px;
+padding:8px 30px;
+transition:background 0.5s;
+position:relative;
+top:50%;
+}
+.btn:hover{
+background:#563434;
+}
+
+
+/*----Trends----*/
+#trends{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 20px;
+   
+}
+#trends-board{
+    flex: 2.5;
+    order: 2;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 500px 500px ;
+    grid-template-rows: 330px 330px ;
+    align-items:right;
+    
+}
+#g1{
+    background: url(img/2.muhammad\ ali.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+#g2{
+    background: url(img/nutrition.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#g3{
+    background: url(img/pexels-athena-6782756.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#g4{
+    background:#777;
+    background-size: cover;
+    background-position: center;
+}
+.grid-notes{
+  
+    color:ghostwhite;
+    position: relative;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.advert-2{
+    flex: 1;
+    order: 1;
+    height: 100vh;
+   
+}
+/*---------about-us-----*/
+
+.about-us{
+    background: url(img/gloves\ \(2\).jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top:30px;
+    margin-bottom: 40px;
+}
+.about-us h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom:20px;
+      
+
+}
+#about-flex{
+    display: flex;
+    height: 700px;
+}
+#flex-1{
+    background-color: khaki;
+    border-radius: 8px;
+    height: 500px;
+    width: 500px;
+}
+#flex-2{
+    background-color:darkred;
+    border-radius: 8px;
+    height: 500px;
+    width: 500px;
+    align-self: flex-end;
+}
+#flex-3{
+    background-color: olivedrab;
+    border-radius: 8px;
+    height: 500px;
+    width: 500px;
+    align-self: center;
+}
+.flex-notes{
+    color:black;
+    font-size: 18px;
+}
+/*------feedback----*/
+.footer{
+    width: 1300px;
+    padding-left:25px;
+    padding-right:25px;
+    height: 400px;
+    text-align: center;
+   
+}
+.row-2{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-around;
+align-items:center;
+}
+.feedback-col{
+    flex-basis:60%;
+    color:black;
+}
+.footer-col-1, .footer-col-2{
+flex-basis:20%;
+}
+.feedback-col h2{
+    font-size: 40px;
+    font-weight: 600;
+
+}
+.footer hr{
+border:none;
+height:1px;
+margin:20px 0;
+background:#b5b5b5;
+}
+.fa{
+margin-right:5px;
+color:red;
+}
+ul{
+list-style:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
