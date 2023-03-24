@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nutrition{
+    width: 100%;
+    margin: auto;
+    padding-top: 30px;
+    text-align: center;
+    height: 100vh;
+}
+.row{
+justify-content: center;
+display: flex;
+}
+#nutrition-board{
+    flex: 2;
+    order: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-area: 10px;
+    height: 100vh;
+    align-items: right;
+    margin-left: 50px;
+}
+#ads-nuts{
+    flex: 1;
+    order: 1;
+    text-align: center;
+    background: yellowgreen;
+    height: 100vh;
+}
+#n1{
+    background: tan;
+    
+}
+#n2{
+    background: tomato;
+    
+}
+#n3{
+    background:thistle;
+    
+}
+#n4{
+    background:wheat;
+    
+}
+#n5{
+    background: darkgrey;
+    
+}
+#n6{
+    background: khaki;
+    
+}
+.grid-notes{
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
