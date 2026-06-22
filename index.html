@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BrazonEngines | MadeFit</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* =========================
+   MENU BAR
+========================= */
+.menu-toggle{
+    display:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.menubar{
+    width:100%;
+    padding:18px 8%;
+    background:#111;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo span{
+    color:orange;
+}
+
+.menubar ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.menubar ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    font-size:16px;
+}
+
+.menubar ul li a:hover{
+    color:orange;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.front{
+    width:100%;
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop') center/cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.front-content{
+    margin-top:70px;
+}
+
+.front h1{
+    font-size:75px;
+    color:white;
+    margin-bottom:15px;
+}
+
+.front h1 span{
+    color:orange;
+}
+
+.front p{
+    color:#ddd;
+    font-size:22px;
+    max-width:750px;
+    line-height:1.8;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#666;
+    font-size:18px;
+}
+
+/* =========================
+   ADS SECTION
+========================= */
+
+.ads-section{
+    width:100%;
+    padding:100px 8%;
+    background:white;
+}
+
+.slider{
+    width:100%;
+    height:450px;
+    overflow:hidden;
+    border-radius:25px;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.slides{
+    width:400%;
+    height:100%;
+    display:flex;
+    animation:slide 16s infinite;
+}
+
+.slide{
+    width:100%;
+    position:relative;
+}
+
+.slide img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+
+.slide-content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    color:white;
+}
+
+.slide-content h3{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.slide-content p{
+    font-size:18px;
+    max-width:500px;
+    line-height:1.7;
+}
+
+@keyframes slide{
+
+    0%{margin-left:0;}
+    20%{margin-left:0;}
+
+    25%{margin-left:-100%;}
+    45%{margin-left:-100%;}
+
+    50%{margin-left:-200%;}
+    70%{margin-left:-200%;}
+
+    75%{margin-left:-300%;}
+    95%{margin-left:-300%;}
+
+    100%{margin-left:0;}
+
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products{
+    width:100%;
+    padding:100px 8%;
+    background:#f1f1f1;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.product-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.product-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:25px;
+}
+
+.product-info h3{
+    margin-bottom:10px;
+    color:#111;
+    font-size:20px;
+}
+
+.product-info p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.price{
+    color:orange;
+    font-size:22px;
+    font-weight:700;
+}
+.buy-btn{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    background:orange;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:15px;
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    border:none;
+}
+
+.buy-btn:hover{
+    background:#ff8800;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    width:100%;
+    padding:100px 8%;
+    background:white;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-box{
+    background:#fafafa;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.service-box:hover{
+    background:orange;
+    color:white;
+    transform:translateY(-8px);
+}
+
+.service-box h3{
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+/* =========================
+   ABOUT US
+========================= */
+
+.aboutus{
+    width:100%;
+    padding:100px 8%;
+    background:#111;
+    color:white;
+}
+
+.about-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1d1d1d;
+    padding:35px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:orange;
+}
+
+.card h3{
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.card p{
+    line-height:1.9;
+    color:#ddd;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+.footer p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:15px;
+    }
+
+    .product-card img{
+        height:160px;
+    }
+
+    .product-info{
+        padding:15px;
+    }
+
+    .product-info h3{
+        font-size:15px;
+    }
+
+    .product-info p{
+        font-size:12px;
+    }
+
+    .price{
+        font-size:16px;
+    }
+
+    .buy-btn{
+        padding:10px;
+        font-size:12px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:768px){
+
+    .menubar{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .menubar ul{
+        display:none;
+        position:absolute;
+        top:75px;
+        right:0;
+        width:220px;
+        background:#111;
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+        border-radius:0 0 0 15px;
+    }
+
+    .menubar ul.active{
+        display:flex;
+    }
+
+    .front h1{
+        font-size:45px;
+    }
+
+    .front p{
+        font-size:18px;
+    }
+
+    .title h2{
+        font-size:32px;
+    }
+
+    .slide-content h3{
+        font-size:28px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+    }
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<div class="menubar">
+
+    <div class="logo">
+        Brazon<span>Engines</span>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <ul id="navMenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#ads">Ads Board</a></li>
+        <li><a href="#products">Latest Product</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+    </ul>
+
+</div>
+<!-- HERO -->
+
+<div class="front">
+
+    <div class="front-content">
+
+        <h1>Brazon<span>Engines</span></h1>
+
+        <p>
+            Integrated technology solutions powering innovation,
+            connectivity, wifi installations, site survey,
+            and offering variety of network products.
+        </p>
+
+
+    </div>
+
+</div>
+
+<!-- ADS SECTION -->
+
+<section class="ads-section" id="ads">
+
+    <div class="title">
+        <h2>BrazonSpace</h2>
+        <p>Promote brands, services and products beautifully</p>
+    </div>
+
+    <div class="slider">
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop">
+
+                <div class="slide-content">
+                    <h3>Digital Advertising</h3>
+                    <p>Grow your business with online marketing.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop">
+
+                <div class="slide-content">
+                    <h3>Technology Solutions</h3>
+                    <p>Smart systems for networking and business.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1400&auto=format&fit=crop">
+
+                <div class="slide-content">
+                    <h3>MadeFit Platform</h3>
+                    <p>Healthy lifestyle and fitness ecosystem.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1400&auto=format&fit=crop">
+
+                <div class="slide-content">
+                    <h3>Affiliate Marketing</h3>
+                    <p>Promote products and earn online.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+    <div class="title">
+        <h2>Latest Products</h2>
+        <p>Newest technology and fitness products</p>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="img/Mikrotik Hex.jpg">
+
+            <div class="product-info">
+                <h3>Mikrotik Router board</h3>
+                <p>Mikrotik Hex Rb951.</p>
+                <div class="price">Tsh250000</div>
+                <a href="https://wa.me/255694960356?text=Hello%20BrazonEngines,%20I%20want%20to%20buy%20this%20product" class="buy-btn">
+                       Buy Now
+                   </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/TP-Link Omada EAP110-Outdoor.jpg">
+
+            <div class="product-info">
+                <h3>Tp-Link EAP110</h3>
+                <p>Outdoor 3oombps wireless outdoor access point</p>
+                <div class="price">Tsh 150000</div>
+                <a href="https://wa.me/255694960356?text=Hello%20BrazonEngines,%20I%20want%20to%20buy%20this%20product" class="buy-btn">
+Buy Now
+</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/Xiaomi Wifi Amplifier Pro 300M 2_4G….jpg">
+
+            <div class="product-info">
+                <h3>Xiaomi WiFi Repeater</h3>
+                <p>Xiaomi Pro 300M Wireless WiFi Repeater</p>
+                <div class="price">Tzs80000</div>
+                <a href="https://wa.me/255694960356?text=Hello%20BrazonEngines,%20I%20want%20to%20buy%20this%20product" class="buy-btn">
+Buy Now
+</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/TP-Link CPE220 2_4GHz 300Mbps.jpg">
+
+            <div class="product-info">
+                <h3>Tp-Link CPE 220</h3>
+                <p>Tp-Link CPE220 2.4GHz 300Mbps</p>
+                <div class="price">Tzs250000</div>
+                <a href="https://wa.me/255694960356?text=Hello%20BrazonEngines,%20I%20want%20to%20buy%20this%20product" class="buy-btn">
+Buy Now
+</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/300M Netzwerk-Repeater WiFi.jpg">
+
+            <div class="product-info">
+                <h3>Netzwerk WiFi Repeater</h3>
+                <p>300M Netzwerk-Repeater Wifi</p>
+                <div class="price">Tsh60000</div>
+                <a href="https://wa.me/255694960356?text=Hello%20BrazonEngines,%20I%20want%20to%20buy%20this%20product" class="buy-btn">
+                  Buy Now
+              </a>
+                </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/omada controller.jpg  ">
+
+            <div class="product-info">
+                <h3>Omada controller</h3>
+                <p>Omada Hardware controller 250</p>
+                <div class="price">Tsh300000</div>
+                <a href="https://wa.me/255694960356?text=Hello%20BrazonEngines,%20I%20want%20to%20buy%20this%20product" class="buy-btn">
+                     Buy Now
+                     </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="title">
+        <h2>Business solutions</h2>
+        <p>Solutions we provide</p>
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service-box">
+            <h3>WiFi Installation</h3>
+            <p>Professional hotspot and network setup solutions.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Shop with us</h3>
+            <p>Get variety of products that fits in with your demand and maximixe your profit</p>
+        </div>
+
+        <div class="service-box">
+            <h3>site survey</h3>
+            <p>Site survey to ensure that network connectivity work so fine and able minimize connectivity errors</p>
+        </div>
+
+      
+    </div>
+
+</section>
+
+<!-- ABOUT US -->
+
+<section class="aboutus" id="about">
+
+    <div class="title">
+        <h2 style="color:white;">About Us</h2>
+        <p style="color:#ccc;">
+            Technology • Innovation • Digital Growth
+        </p>
+    </div>
+
+    <div class="about-container">
+
+        <div class="card">
+
+            <h3>We Are</h3>
+
+            <p>
+                BrazonEngines a technology-driven company focused
+                on integrated digital solutions including networking,
+                hotspot systems, consultation and site survey.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Toward Vision</h3>
+
+            <p>
+                Leading integrated technology,
+                empowering businesses through innovation and connectivity.
+            </p>
+
+        </div>
+
+        
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    <h2>BrazonEngines</h2>
+
+    <p>
+        Powered by Innovation • MadeFit Ecosystem
+    </p>
+
+</div>
+<script>
+
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
+
+</script>
+
+</body>
+</html>
